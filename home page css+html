@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Phoebe Oh</title>
+<link rel="icon" href="https://64.media.tumblr.com/f5e4ed246a18e151eab21efba9345f1c/cf52fffe56fc088e-fb/s500x750/e6a3cabbb8e3ed46ccdf5535b190069849b5c9fe.gifv">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<script>
+    function changecolor() {
+        var namecolor = document.getElementById("name");
+        if(namecolor.style.color == "var(--accent)") {
+            namecolor.style.color = "var(--accent2)";
+            document.body.style.backgroundImage = "url('https://i.ibb.co/277qsNz/ezgif-com-gif-maker-1.gif')";
+        }
+        else if(namecolor.style.color = "var(--accent2)") {
+            namecolor.style.color = "var(--accent)";
+            document.body.style.backgroundImage = "url('https://i.ibb.co/gRNgMgp/t.gif')";
+        }
+    }
+</script>
+
+<style>
+    @charset "utf-8";
+
+:root {
+    --light: #fff;
+    --gray: #777;
+    --dark: #000;
+    --accent: #01bbc8;
+    --accent2: #016573;
+    --darkaccent: #001a1e;
+}
+
+::selection {
+	background-color:var(--accent);
+}
+::-webkit-scrollbar {
+    width:9px;
+}
+::-webkit-scrollbar-track {
+    background:var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background:var(--gray);
+}
+::-webkit-scrollbar-thumb:hover {
+    background:var(--accent);
+}
+body {
+	color:var(--light);
+	font-family:'Karla', sans-serif;
+	font-size:20px;
+	font-weight:0;
+	background:url('https://i.ibb.co/gRNgMgp/t.gif');
+	background-size:950px;
+}
+.centerbox {
+    text-align:center;
+}
+.rightbox {
+    text-align:right;
+}
+.divider {
+    padding:5%;
+}
+#headerlinks {
+	width:98%;
+	text-transform:uppercase;
+	text-align:right;
+	font-weight:500;
+	padding:1%;
+}
+#headerlinks a, #headerlinkshome a, #headerlinkswork a, #headerlinksabout a {
+    color:var(--light);
+	font-size:1.1em;
+	padding-left:10px;
+	padding-right:0px;
+	margin-right:10px;
+	letter-spacing:0.1em;
+	text-decoration:none;
+}
+#headerlinks a:hover, #headerlinkshome a:hover, #headerlinkswork a:hover, #headerlinksabout a:hover {
+	color:var(--accent);
+	display:inline;
+}
+#headerlinkshome, #headerlinkswork, #headerlinksabout {
+    display:inline;
+}
+.selected {
+    background:linear-gradient(0deg, var(--accent) 50%, transparent 50%);
+    display:inline;
+}
+.click {
+    font-size:1.1em;
+	padding-left:10px;
+	padding-right:10px;
+	margin-right:10px;
+	letter-spacing:0.1em;
+    display:inline;
+}
+.click:hover {
+    background:var(--light);
+    color:var(--accent2);
+	display:inline;
+	cursor:pointer;
+}
+#introbox {
+	position:relative;
+	max-width:40%;
+	left:28%;
+}
+#intro {
+	font-size:2em;
+	margin-top:40%;
+}
+#name {
+	font-size:5em;
+	font-weight:800;
+}
+#name:hover {
+    color:var(--accent);
+    font-style:italic;
+    letter-spacing:.05em;
+    cursor:default;
+}
+#name::selection {
+    background:var(--light);
+    color:var(--accent);
+}
+#desc {
+	font-size:1.2em;
+	margin-bottom:25%;
+}
+.sectiontitle {
+    font-size:3em;
+    font-weight:800;
+}
+#homecontent, #workcontent {
+	width:90%;
+	padding:5%;
+	margin-top:300px;
+	background:var(--light);
+    color:var(--dark);
+}
+#homecontent a {
+	text-decoration:none;
+	color:var(--accent);
+}
+#homecontent a::selection {
+    background:var(--light);
+    color:var(--accent);
+}
+#homecontent a:hover {
+	background-color:var(--accent2);
+	color:var(--light);
+}
+#homecontent a:hover::selection {
+    background-color:var(--dark);
+}
+#about, #work {
+    width:96%;
+    padding:2%;
+}
+#workcontent {
+    margin-top:0;
+    overflow:hidden;
+}
+.worktitle {
+    padding-top:10px;
+    font-size:1.3em;
+    font-weight:800;
+    text-transform:uppercase;
+}
+.worktitle a {
+    color:var(--dark);
+    text-decoration:none;
+}
+.worktitle a:hover {
+    background:linear-gradient(0deg, var(--accent) 50%, transparent 50%);
+    font-style:italic;
+    letter-spacing:.05em;
+}
+.workcategory {
+    padding-right:25px;
+    padding-bottom:25px;
+    color:var(--gray);
+    font-size:.9em;
+    font-style:italic;
+}
+.workcategory::selection {
+    color:var(--light);
+}
+.workimg img {
+    margin-top:5%;
+    margin-bottom:10px;
+    width:95vw;
+    height:400px;
+    transform:translate(-5%);
+    object-fit:cover;
+    box-shadow:7px 7px 7px 7px var(--gray);
+}
+.workimg img:hover {
+    box-shadow:7px 7px 7px 7px var(--darkaccent);
+    cursor:pointer;
+}
+#gttbox {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:var(--gray);
+    width:2.5em;
+    height:2.5em;
+    align-content:center;
+    text-align:center;
+    display:none;
+    opacity:.5;
+}
+#gttbox:hover {
+    opacity:1;
+    cursor:pointer;
+}
+#gtt {
+    color:var(--light);
+    font-size:1.8em;
+}
+#footer {
+	width:97%;
+	height:auto;
+	display:inline-flex;
+	align-content:center;
+	margin-top:30px;
+	padding-top:1%;
+	margin-bottom:3%;
+	padding-left:2%;
+}
+#footercredit {
+	width:47%;
+	padding-right:1.5%;
+	text-align:left;
+}
+#footercontact {
+	width:47%;
+	padding-left:1.5%;
+	text-align:right;
+}
+#footercontact a {
+    color:var(--light);
+    font-style:italic;
+}
+#footercontact a:hover {
+    background:var(--accent);
+    text-decoration:none;
+}
+iframe {
+    display:none !important;
+}
+</style>
+</head>
+<body>
+	<div id="headerlinks">
+	  <div id="headerlinkshome" class="click selected"><a href="/">home</a></div> <div id="headerlinksabout" class="click"><a href="#about">about</a></div> <div id ="headerlinkswork" class="click"><a href="#work">work</a></div>
+    </div>
+    <div id="introbox">
+        <div id="intro">Hello, I'm</div>
+        <div id="name" onclick="changecolor()">Phoebe Oh</div>
+        <div id="desc">— she/her, animator and designer based in Maryland.</div>
+    </div>
+    <a id="about"></a>
+    <div id="homecontent">
+        <div class="sectiontitle">ABOUT;</div>
+        <div id="about">
+        welcome!
+            <p>I'm studying to get my BA in Animation from the University of Maryland, Baltimore County, where I'll be graduating this December. My passion for unique interactive experiences has propelled me towards a field of user-focused animation and visual web design.
+            <p>You can view a copy of my resume <a href="https://docs.google.com/document/d/1wd7ZsfH4TeBz3xbNl_DfzHuUw5AIx4r7geo0RxeVo_o/edit?usp=sharing" target="_blank">here</a> or <a href="mailto:phoebe.oh@gmail.com" target="_blank">email me</a> with any questions or inquiries.
+            <p>Thanks for stopping by!
+        </div>
+    </div>
+    <div class="divider">
+        <div class="centerbox sectiontitle">let's keep things unique.</div>
+    </div>
+    <a id="work"></a>
+    <div id="workcontent">
+        <div class="rightbox"><div class="sectiontitle">WORK;</div></div>
+        <div id="work">
+            <a href="/wol" class="workimg">
+                <img src="https://64.media.tumblr.com/cc5d5c39fd6a8e8f31e82817886908e9/e8e36ec6e1482593-02/s2048x3072/5ed442a2490f398e03e88b2d6de58ba7bd8243a4.png" />
+            </a>
+            <div class="worktitle"><a href="/wol">WORD OF LIFE</a></div>
+            <div class="workcategory">web design project</div>
+            <a href="/horror" class="workimg">
+                <img src="https://64.media.tumblr.com/89a02bf2078b260f3e89b7efa8b19520/a1d8509bcc3fd1bd-58/s2048x3072/64316882777ceb1dc1c74c8e9377b3e3cc57f0e1.png" />
+            </a>
+            <div class="worktitle"><a href="/horror">HORROR SCAPE</a></div>
+            <div class="workcategory">interactive data visualization + animation</div>
+            <a href="/portfolio" class="workimg">
+                <img src="https://64.media.tumblr.com/35bddf7cb8b9c0881db5d25e1ebfc0d4/e8e36ec6e1482593-f5/s2048x3072/ac97f60d5cbd54b019b201259060f1e6415288fe.png" />
+            </a>
+            <div class="worktitle"><a href="/portfolio">PORTFOLIO</a></div>
+            <div class="workcategory">personal web design project</div>
+            <a href="/shorts" class="workimg">
+                <img src="https://64.media.tumblr.com/c97e7c1acebcddaf022c9d6fee865d86/372b09a6426d2764-e0/s1280x1920/f8544c501f41d430438816e0221635ae2c9d2cd3.png" />
+            </a>
+            <div class="worktitle"><a href="/shorts">ANIMATED SHORTS</a></div>
+            <div class="workcategory">animation work (junk drawer, identity, lunchbox)</div>
+            <a href="/hefou" class="workimg">
+                <img src="https://64.media.tumblr.com/93d77d86a0a0bd3a42a46ca516eef890/e8e36ec6e1482593-e1/s2048x3072/9c75a07b8ae25f5fb3cd2f16370730f95d2b8cde.png" />
+            </a>
+            <div class="worktitle"><a href="/hefou">HEFO-UGANDA</a></div>
+            <div class="workcategory">volunteer web design project</div>
+            <a href="/gifs" class="workimg">
+                <img src="https://i.ibb.co/2Pn3rrd/slow-stairs.gif" />
+            </a>
+            <div class="worktitle"><a href="/gifs">GIFS</a></div>
+            <div class="workcategory">animation work</div>
+            <a href="/dogs" class="workimg">
+                <img src="https://64.media.tumblr.com/899a320391fc0123f83c34be1deeafa6/ba8d346637158b8b-ca/s2048x3072/d8d507af29febaf1a933e71365f434a724976f41.png" />
+            </a>
+            <div class="worktitle"><a href="/dogs">DOG PORTRAITS</a></div>
+            <div class="workcategory">traditional and digital art</div>
+            <a href="/illus" class="workimg">
+                <img src="https://64.media.tumblr.com/aa8576363d38c9b18fb9aa35c1dae12d/ba8d346637158b8b-f5/s2048x3072/84ec196e0bc33465b408858946ec44017e423fe5.png" />
+            </a>
+            <div class="worktitle"><a href="/illus">ILLUSTRATIONS</a></div>
+            <div class="workcategory">traditional and digital art</div>
+        </div>
+        <div id="gttbox">
+            <div id="gtt" onclick="topfunction()">↑</div>
+        </div>
+    </div>
+	<div id="footer">
+		<div id="footercredit">© 2021 Phoebe Oh. All rights reserved.</div>
+		<div id="footercontact">
+			<a href="mailto:phoebe.oh@gmail.com" title="email">phoebe.oh@gmail.com</a><br />
+			+1 410.402.4139
+		</div>
+	</div>
+	
+	<script>
+	//from w3 schools' scroll to top tutorial
+	    mybutton = document.getElementById("gttbox");
+	    window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                } else {
+                mybutton.style.display = "none";
+                }
+            }
+        function topfunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+	</script>
+</body>
+</html>
