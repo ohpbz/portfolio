@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Animated Shorts</title>
+<link rel="icon" href="https://64.media.tumblr.com/f5e4ed246a18e151eab21efba9345f1c/cf52fffe56fc088e-fb/s500x750/e6a3cabbb8e3ed46ccdf5535b190069849b5c9fe.gifv">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<style>
+    @charset "utf-8";
+
+:root {
+    --light: #fff;
+    --gray: #777;
+    --dark: #000;
+    --accent: #01bbc8;
+    --accent2: #016573;
+    --darkaccent: #001a1e;
+}
+
+::selection {
+	background-color:var(--accent);
+}
+::-webkit-scrollbar {
+    width:9px;
+}
+::-webkit-scrollbar-track {
+    background:var(--dark);
+}
+::-webkit-scrollbar-thumb {
+    background:var(--gray);
+}
+::-webkit-scrollbar-thumb:hover {
+    background:var(--accent);
+}
+body {
+	color:var(--light);
+	font-family:'Karla', sans-serif;
+	font-size:20px;
+	font-weight:0;
+	background:url('https://i.ibb.co/gRNgMgp/t.gif');
+	background-size:950px;
+}
+.centerbox {
+    text-align:center;
+}
+.rightbox {
+    text-align:right;
+}
+.divider {
+    padding:1.75%;
+}
+#headerlinks {
+	width:98%;
+	text-transform:uppercase;
+	text-align:right;
+	font-weight:500;
+	padding:1%;
+	padding-bottom:2%;
+}
+#headerlinks a, #headerlinkshome a, #headerlinkswork a, #headerlinksabout a {
+    color:var(--light);
+	font-size:1.1em;
+	padding-left:10px;
+	padding-right:0px;
+	margin-right:10px;
+	letter-spacing:0.1em;
+	text-decoration:none;
+}
+#headerlinks a:hover, #headerlinkshome a:hover, #headerlinkswork a:hover, #headerlinksabout a:hover {
+	color:var(--accent);
+	display:inline;
+}
+#headerlinkshome, #headerlinkswork, #headerlinksabout {
+    display:inline;
+}
+.selected {
+    background:linear-gradient(0deg, var(--accent) 50%, transparent 50%);
+    display:inline;
+}
+.click {
+    font-size:1.1em;
+	padding-left:10px;
+	padding-right:10px;
+	margin-right:10px;
+	letter-spacing:0.1em;
+    display:inline;
+}
+.click:hover {
+    background:var(--light);
+    color:var(--accent2);
+	display:inline;
+	cursor:pointer;
+}
+#introbox {
+	position:relative;
+	max-width:40%;
+	left:28%;
+}
+#intro {
+	font-size:2em;
+	margin-top:40%;
+}
+#name {
+	font-size:5em;
+	font-weight:800;
+}
+#name:hover {
+    color:var(--accent);
+    font-style:italic;
+    letter-spacing:.05em;
+    cursor:default;
+}
+#name::selection {
+    background:var(--light);
+    color:var(--accent);
+}
+#desc {
+	font-size:1.2em;
+	margin-bottom:30%;
+}
+.sectiontitle {
+    font-size:3em;
+    font-weight:800;
+}
+.sectiontitle a:hover {
+    background:none !important;
+    color:var(--dark) !important;
+}
+#homecontent, #workcontent {
+	width:90%;
+	padding:5%;
+	margin-top:300px;
+	background:var(--light);
+    color:var(--dark);
+}
+#homecontent a, #workcontent a {
+	text-decoration:none;
+	color:var(--accent);
+}
+#homecontent a::selection, #workcontent a::selection {
+    background:var(--light);
+    color:var(--accent);
+}
+#homecontent a:hover, #workcontent a:hover {
+	background-color:var(--accent2);
+	color:var(--light);
+}
+#homecontent a:hover::selection, #workcontent a:hover::selection {
+    background-color:var(--dark);
+}
+#about, #work {
+    width:96%;
+    padding:2%;
+}
+#workcontent {
+    margin-top:0;
+    overflow:hidden;
+}
+.worktitle {
+    padding-top:10px;
+    font-size:1.3em;
+    font-weight:800;
+    text-transform:uppercase;
+}
+.worktitle a {
+    color:var(--dark);
+    text-decoration:none;
+}
+.worktitle a:hover {
+    background:linear-gradient(0deg, var(--accent) 50%, transparent 50%);
+    font-style:italic;
+    letter-spacing:.05em;
+}
+.workcategory {
+    padding-right:25px;
+    padding-bottom:25px;
+    color:var(--gray);
+    font-size:.9em;
+    font-style:italic;
+}
+.workcategory::selection {
+    color:var(--light);
+}
+.workimg img, .workimg2 img {
+    margin-top:20px;
+    margin-bottom:10px;
+    width:95vw;
+    height:600px;
+    transform:translate(-5%);
+    object-fit:cover;
+    box-shadow:7px 7px 7px 7px var(--gray);
+}
+.workimg2 img {
+    margin-top:0px;
+    width:97%;
+    height:30%;
+}
+.workimg img a:hover, .workimg2 img a:hover {
+    background:none !important;
+}
+#workbox {
+	display:flex;
+	align-content:center;
+	margin-top:30px;
+	padding-top:1%;
+	margin-bottom:3%;
+	padding-left:2%;
+}
+#workleft {
+    width:45%;
+}
+#workright {
+}
+#gttbox {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:var(--gray);
+    width:2.5em;
+    height:2.5em;
+    align-content:center;
+    text-align:center;
+    display:none;
+    opacity:.5;
+}
+#gttbox:hover {
+    opacity:1;
+    cursor:pointer;
+}
+#gtt {
+    color:var(--light);
+    font-size:1.8em;
+}
+#footer {
+	width:97%;
+	height:auto;
+	display:inline-flex;
+	align-content:center;
+	margin-top:30px;
+	padding-top:1%;
+	margin-bottom:3%;
+	padding-left:2%;
+}
+#footercredit {
+	width:47%;
+	padding-right:1.5%;
+	text-align:left;
+}
+#footercontact {
+	width:47%;
+	padding-left:1.5%;
+	text-align:right;
+}
+#footercontact a {
+    color:var(--light);
+    font-style:italic;
+}
+#footercontact a:hover {
+    background:var(--accent);
+    text-decoration:none;
+}
+iframe {
+    display:none !important;
+}
+</style>
+</head>
+<body>
+	<div id="headerlinks">
+	  <div id="headerlinkshome" class="click"><a href="/">home</a></div> <div id="headerlinksabout" class="click"><a href="/#about">about</a></div> <div id ="headerlinkswork" class="click selected"><a href="/#work">work</a></div>
+    </div>
+    <div id="workcontent">
+        <div class="rightbox">
+            <div class="sectiontitle"><a href="https://vimeo.com/phoebeoh/" target="_blank">ANIMATED SHORTS;</a></div>
+            <div class="workcategory">interactive animation</div>
+        </div>
+        <div id="work">
+            As an animation student, I've created several short films over the years. These are my favorites!
+            <p>
+            <div id="workbox">
+            <div id="workleft"></div>
+            <div id="workright">
+            <a href="https://vimeo.com/381385330" target="_blank"><b>junk drawer (2020):</b></a>
+            <ul>
+                <li>2d animated short film</li>
+                <li>focuses on the forgotten trinkets that carry our mundane, personal, and most treasured memories</li>
+                <li>inspired in part by the work of films such as Lulu Wang's "The Farewell"</li>
+                <li>assets made from paper cut outs, photographs, and digital illustrations</li>
+                <li>animated and composited in adobe aftereffects</li>
+                <li>sfx captured with a zoom recorder and mixed with self-composed music in reaper</li>
+            </ul>
+            <div class="workimg2">
+                <img src="https://64.media.tumblr.com/c97e7c1acebcddaf022c9d6fee865d86/372b09a6426d2764-e0/s1280x1920/f8544c501f41d430438816e0221635ae2c9d2cd3.png" />
+            </div>
+            <div class="divider"></div>
+            <p><a href="https://vimeo.com/371709471" target="_blank"><b>when in the system (2019):</b></a>
+            <ul>
+                <li>video remix inspired by the idea of "assimilation is death"</li>
+                <li>details the experience faced by many 2nd/3rd generation immigrants who turn on their culture - and the people in it - in order to survive in western society</li>
+                <li>digital illustrations and animations created in photoshop</li>
+                <li>featured footage with recordings of popular culture icon pac-man characters and clips from the "The Battle of Algiers" - a 1966 film describing the warfare between Muslims and the National Liberation Front against the French Algerian authorities and all the cultural tensions between them</li>
+                <li>animated and composited in aftereffects</li>
+                <li>music created in reaper</li>
+            </ul>
+            <div class="workimg2"><img src="https://64.media.tumblr.com/69c45a0c96ad1ce99b10c764289258ba/a1d8509bcc3fd1bd-7f/s1280x1920/e8931bf4e16beaa50909e780743edf6e9eb30d7d.png" /></div>
+            <div class="divider"></div>
+            <p><a href="https://vimeo.com/442252898" target="_blank"><b>identity (2019):</b></a>
+            <ul>
+                <li>experimental animation responding to the question, "Who am I?"</li>
+                <li>digital hand drawn animation, paper stop motion, multiplane paint on glass, and video footage</li>
+                <li>composited in aftereffects</li>
+            </ul>
+            <div class="workimg2">
+                <img src="https://64.media.tumblr.com/723f14ae23992ac9f9d1e3ef22ca34ee/372b09a6426d2764-6e/s1280x1920/e6d1d29136ff20b4e98d49fc7a5eeb179bb62e9e.png" />
+            </div>
+            <div class="divider"></div>
+            <p><a href="https://vimeo.com/371683806" target="_blank"><b>lunchbox (2018):</b></a>
+            <ul>
+                <li>2D animation about celebrating a birthday alone and away from family for the first time. for this piece, I drew upon my own experiences as a university freshman learning how to re-experience events alone - or with friends - when I had been used to sharing them with my family.</li>
+                <li>digital illustrations and animations created in photoshop</li>
+                <li>composited in aftereffects</li>
+                <li>music created in reaper</li>
+            </ul>
+            <div class="workimg2">
+                <img src="https://64.media.tumblr.com/4d6c9c3ce47f6fed5541806668a1caca/372b09a6426d2764-33/s1280x1920/68bd5668bb099c03e3395adb7f155b1e1890c7c9.png" />
+            </div>
+            <p>
+            </div>
+            </div>
+        <div class="divider"></div>
+        <p>All of these works and more can be seen on my <a href="https://vimeo.com/phoebeoh/" target="_blank">vimeo</a>.
+        <div id="gttbox">
+            <div id="gtt" onclick="topfunction()">↑</div>
+        </div>
+    </div>
+    </div>
+	<div id="footer">
+		<div id="footercredit">© 2021 Phoebe Oh. All rights reserved.</div>
+		<div id="footercontact">
+			<a href="mailto:phoebe.oh@gmail.com" title="email">phoebe.oh@gmail.com</a><br />
+			+1 410.402.4139
+		</div>
+	</div>
+	
+	<script>
+	//from w3 schools' scroll to top tutorial
+	    mybutton = document.getElementById("gttbox");
+	    window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                } else {
+                mybutton.style.display = "none";
+                }
+            }
+        function topfunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+	</script>
+</body>
+</html>
